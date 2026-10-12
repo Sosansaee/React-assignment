@@ -1,13 +1,20 @@
+
 function Footer({ company, links }) {
   return (
-    <footer>
+    <footer className="footer">
       <h3>{company}</h3>
 
-      {links.map((link) => (
-        <a href="#">{link}</a>
-      ))}
+      <div className="footer-links">
+        {links.map((link, index) => (
+          <a href="#" key={index}>
+            {link}
+          </a>
+        ))}
+      </div>
+
+      <p>© 2026 {company}. All rights reserved.</p>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

@@ -1,16 +1,19 @@
-
 function Navbar({ logo, menuItems }) {
   return (
-    <nav>
-      <h2>{logo}</h2>
+    <nav className="navbar">
+      <h2 className="navbar-logo">{logo}</h2>
 
-      <ul>
+      <ul className="navbar-menu">
         {menuItems.map((item) => (
-          <li>{item}</li>
+          <li key={item}>
+            <a href={`#${item.toLowerCase()}`}>
+              {item}
+            </a>
+          </li>
         ))}
       </ul>
     </nav>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
